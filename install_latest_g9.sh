@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script to install latest gallium nine
-# echo "First get the necessary packages"
+echo "First get the necessary packages"
 sudo apt update
 sudo apt install libd3dadapter9-mesa libd3dadapter9-mesa:i386 libegl1-mesa libegl1-mesa:i386 -y
 
