@@ -17,3 +17,8 @@ tar -xf gallium-nine-standalone-v*tar.gz
 mv gallium-nine-standalone .gallium-nine-standalone
 cd ~/.gallium-nine-standalone
 ./nine-install.sh
+
+echo "Clean leftovers"
+rm ~/gallium-nine*.tar.gz
+
+echo "And now we should be good to go :)"
