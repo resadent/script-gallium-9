@@ -1,16 +1,13 @@
 #!/bin/bash
 # Script to install latest gallium nine
-echo "First get the necessary packages"
+# echo "First get the necessary packages"
 sudo apt update
-sudo apt install libd3dadapter9-mesa libd3dadapter9-mesa:i386 libegl1-mesa libegl1-mesa:i386
+sudo apt install libd3dadapter9-mesa libd3dadapter9-mesa:i386 libegl1-mesa libegl1-mesa:i386 -y
 
 echo "Now downloading gallium nine"
 cd ~
-curl -s https://api.github.com/repos/iXit/wine-nine-standalone/releases/latest \
-| grep "gallium-nine-standalone-v*tar.gz" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
+DLOADURL=$(curl -s https://api.github.com/repos/iXit/wine-nine-standalone/releases/latest | grep browser_download_url | cut -d '"' -f 4)
+wget $DLOADURL
 
 echo "And installing it"
 tar -xf gallium-nine-standalone-v*tar.gz
