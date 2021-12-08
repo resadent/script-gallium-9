@@ -19,6 +19,6 @@ cd ~/.gallium-nine-standalone
 echo "Clean leftovers"
 rm ~/gallium-nine*.tar.gz
 rm ~/install_latest_g9.sh
-rm ~/.gallium-nine-standalone
+rm -r ~/.gallium-nine-standalone
 
 echo "And now we should be good to go :)"
