@@ -7,7 +7,7 @@ sudo apt install libd3dadapter9-mesa libd3dadapter9-mesa:i386 libegl1-mesa libeg
 echo "Now downloading gallium nine"
 cd ~
 DLOADURL=$(curl -s https://api.github.com/repos/iXit/wine-nine-standalone/releases/latest \
-| grep -E 'browser_download_url.*gallium-nine-standalone' | cut -d '"' -f 4)
+| grep -E 'browser_download_url.*gallium-nine-standalone.*tar.gz' | cut -d '"' -f 4)
 wget $DLOADURL
 
 echo "And installing it"
