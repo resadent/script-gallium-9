@@ -1,2 +1,2 @@
 # script-gallium-9
-Script for installing gallium nine on ubuntu.
+Script for installing gallium nine on any debian based distro.
